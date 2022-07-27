@@ -76,3 +76,40 @@ public class Mid207CourseSchedule {
         return true;
     }
 }
+
+
+/*
+DFS
+
+enum Status {INITIAL,VISITING, VISITED;}
+class Solution {
+    public boolean canFinish(int numCourses, int[][] prerequisites) {
+        Map<Integer, Status> status = new HashMap();
+        Map<Integer, List<Integer>> pre = new HashMap();
+        // build node
+        for(int i = 0; i < numCourses; i++) {
+            pre.put(i, new LinkedList());
+            status.put(i, Status.INITIAL);
+        }
+        // add edge
+        for(int[] pair : prerequisites) {
+            pre.get(pair[0]).add(pair[1]);
+        }
+        for(int i = 0; i < numCourses; i++) {
+            if(!topologicalSort(pre, status, i)) return false;  
+        }
+        return true;
+    }
+    private boolean topologicalSort(Map<Integer, List<Integer>> pre, Map<Integer, Status> status, int cur) {
+        if(status.get(cur) == Status.VISITED) return true;
+        if(status.get(cur) == Status.VISITING) return false;
+        status.put(cur, Status.VISITING);
+        for(int next : pre.get(cur)) {
+            if(!topologicalSort(pre, status, next)) return false;
+        }
+        status.put(cur, Status.VISITED);
+        return true;
+    }
+}
+
+*/

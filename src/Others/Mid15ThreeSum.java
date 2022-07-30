@@ -2,8 +2,10 @@ package Others;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Set;
 
 /*
  * Given an integer array nums, return all the triplets [nums[i], nums[j], nums[k]] such that i != j, i != k, 
@@ -21,6 +23,37 @@ The distinct triplets are [-1,0,1] and [-1,-1,2].
 Notice that the order of the output and the order of the triplets does not matter.
  */
 
+//using set for deduplication
+public class Mid15ThreeSum {
+	public List<List<Integer>> threeSum(int[] nums) {
+        Set<List<Integer>> set = new HashSet<>();
+        if(nums == null ||nums.length < 3) {
+            return new ArrayList<>();
+        }
+        
+        Arrays.sort(nums);
+        for(int i = 0; i < nums.length; i++) {
+            int left = i + 1;
+            int right = nums.length - 1;
+
+            while(left < right) {
+                if(nums[i] + nums[left] + nums[right] > 0) {
+                    right--;
+                }else if (nums[i] + nums[left] + nums[right] < 0) {
+                    left++;
+                }else {
+                    set.add(Arrays.asList(nums[i], nums[left], nums[right]));
+                    left++;
+                    right--;
+                }
+            }
+        }
+        return new ArrayList<>(set);
+    }
+}
+
+
+/*
 public class Mid15ThreeSum {
 	//deduplicate - very important
 	public List<List<Integer>> threeSum(int[] nums) {
@@ -31,22 +64,22 @@ public class Mid15ThreeSum {
         
         Arrays.sort(nums);
         for(int i = 0; i < nums.length; i++) {
+            int left = i + 1;
+            int right = nums.length - 1;
             
             if(i > 0 && nums[i] == nums[i - 1]) {
                 continue;
             }
-            int left = i + 1;
-            int right = nums.length - 1;
             
             while(left < right) {
                 if(nums[i] + nums[left] + nums[right] > 0) {
                     right--;
-                    while(left < right && nums[right] == nums[right - 1]) {
+                    while(left < right && nums[right] == nums[right + 1]) {
                         right--;
                     }
                 }else if (nums[i] + nums[left] + nums[right] < 0) {
                     left++;
-                    while(left < right && nums[left] == nums[left + 1]) {
+                    while(left < right && nums[left] == nums[left - 1]) {
                         left++;
                     }
                 }else {
@@ -70,3 +103,4 @@ public class Mid15ThreeSum {
         return res;
     }
 }
+*/

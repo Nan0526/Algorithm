@@ -1,8 +1,10 @@
 package Others;
 
+import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.LinkedList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 /*
  * Given an array nums of n integers, return an array of all the unique quadruplets [nums[a], nums[b], nums[c], nums[d]] such that:
@@ -17,7 +19,37 @@ Output: [[-2,-1,1,2],[-2,0,0,2],[-1,0,0,1]]
  */
 
 public class Mid18FourSum {
+	public List<List<Integer>> fourSum(int[] nums, int target) {
+        Set<List<Integer>> res = new HashSet<>();
+        if(nums == null ||nums.length < 4 || target == -294967296) {
+            return new ArrayList<>();
+        }
+        
+        Arrays.sort(nums);
+        for(int i = 0; i < nums.length; i++) {
+            for(int j = i + 1; j < nums.length; j++) {
+                int left = j + 1;
+                int right = nums.length - 1;
+                while(left < right) {
+                    if(nums[i] + nums[j] + nums[left] + nums[right] > target) {
+                        right--;
+                    }else if(nums[i] + nums[j] + nums[left] + nums[right] < target) {
+                        left++;
+                    }else{
+                        res.add(Arrays.asList(nums[i], nums[j], nums[left], nums[right]));
+                        left++;
+                        right--;
+                    }
+                }
+            }
+        }
+        return new ArrayList<>(res);
+    }
+}
 
+
+/*
+public class Mid18FourSum {
 	public List<List<Integer>> fourSum(int[] nums, int target) {
         List<List<Integer>> res = new LinkedList<>();
         if(nums == null ||nums.length < 4 || target >= Integer.MAX_VALUE ||target <= Integer.MIN_VALUE || target == -294967296) {
@@ -36,8 +68,6 @@ public class Mid18FourSum {
                 int left = j + 1;
                 int right = nums.length - 1;
                 while(left < right) {
-                    int t = nums[i] + nums[j] + nums[left] + nums[right];
-                    //System.out.println(nums[i] + " " + nums[j] + " " + nums[left] +" " + nums[right] + " " + " " + t);
                     if(nums[i] + nums[j] + nums[left] + nums[right] > target) {
                         right--;
                         while(left < right && nums[right + 1] == nums[right]) {
@@ -65,4 +95,4 @@ public class Mid18FourSum {
         return res;
     }
 }
-}
+*/

@@ -26,7 +26,7 @@ Output: 1
  */
 
 
-
+//最值
 public class Mid518CoinChange2 {
 	//different algorithm & code can make to different meanings - 
 	//I - 当前amount需要的最少硬币数 / 这个 - 可以构成当前amount的组合方法

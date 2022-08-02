@@ -16,7 +16,7 @@ There are two ways to reach the bottom-right corner:
 2. Down -> Down -> Right -> Right
  */
 
-
+//计数
 public class Mid63UniquePathsII {
 
 	public int uniquePathsWithObstacles(int[][] obstacleGrid) {

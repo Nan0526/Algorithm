@@ -1,6 +1,5 @@
 package TreeEasy;
 
-import TreeEasy.Easy270CloestBinarySearchTreeValue.TreeNode;
 
 /*
  * Given the root of a binary tree, return the length of the diameter of the tree.
@@ -40,15 +39,15 @@ public class Easy543DiameterOfBinaryTree {
     }
     
     public class TreeNode {
-    	int val;
-    	TreeNode left;
-    	TreeNode right;
-    	TreeNode() {}
-    	TreeNode(int val) { this.val = val; }
-    	TreeNode(int val, TreeNode left, TreeNode right) {
-    		this.val = val;
-    		this.left = left;
-    		this.right = right;
-    	}
+        int val;
+        TreeNode left;
+        TreeNode right;
+        TreeNode() {}
+        TreeNode(int val) { this.val = val; }
+        TreeNode(int val, TreeNode left, TreeNode right) {
+            this.val = val;
+            this.left = left;
+            this.right = right;
+        }
     }
 }

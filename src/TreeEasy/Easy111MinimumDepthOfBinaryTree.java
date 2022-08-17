@@ -1,6 +1,5 @@
 package TreeEasy;
 
-import TreeEasy.Easy104MaximumDepthOfBinaryTree.TreeNode;
 
 /*
  * Given a binary tree, find its minimum depth.
@@ -34,15 +33,15 @@ public class Easy111MinimumDepthOfBinaryTree {
     }
 	
 	public class TreeNode {
-		 int val;
-		 TreeNode left;
-		 TreeNode right;
-		 TreeNode() {}
-		 TreeNode(int val) { this.val = val; }
-		 TreeNode(int val, TreeNode left, TreeNode right) {
-			 this.val = val;
-		 	 this.left = left;
-		 	 this.right = right;
-		 }
+	    int val;
+	    TreeNode left;
+	    TreeNode right;
+	    TreeNode() {}
+	    TreeNode(int val) { this.val = val; }
+	    TreeNode(int val, TreeNode left, TreeNode right) {
+	        this.val = val;
+	        this.left = left;
+	        this.right = right;
+	    }
 	}
 }

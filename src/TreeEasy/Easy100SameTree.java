@@ -1,6 +1,5 @@
 package TreeEasy;
 
-import TreeEasy.Easy101SymmetricTree.TreeNode;
 
 /*
  * Given the roots of two binary trees p and q, write a function to check if they are the same or not.
@@ -40,15 +39,15 @@ public class Easy100SameTree {
     }
 	
 	public class TreeNode {
-		 int val;
-		 TreeNode left;
-		 TreeNode right;
-		 TreeNode() {}
-		 TreeNode(int val) { this.val = val; }
-		 TreeNode(int val, TreeNode left, TreeNode right) {
-			 this.val = val;
-		 	 this.left = left;
-		 	 this.right = right;
-		 }
+	    int val;
+	    TreeNode left;
+	    TreeNode right;
+	    TreeNode() {}
+	    TreeNode(int val) { this.val = val; }
+	    TreeNode(int val, TreeNode left, TreeNode right) {
+	        this.val = val;
+	        this.left = left;
+	        this.right = right;
+	    }
 	}
 }

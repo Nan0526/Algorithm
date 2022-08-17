@@ -1,6 +1,5 @@
 package TreeEasy;
 
-import TreeEasy.Easy226InvertBinaryTree.TreeNode;
 
 /*
  * Given the root of a binary tree and an integer targetSum, return true if the tree has a root-to-leaf path 
@@ -28,15 +27,15 @@ public class Easy112PathSum {
     }
 	
 	public class TreeNode {
-		 int val;
-		 TreeNode left;
-		 TreeNode right;
-		 TreeNode() {}
-		 TreeNode(int val) { this.val = val; }
-		 TreeNode(int val, TreeNode left, TreeNode right) {
-			 this.val = val;
-		 	 this.left = left;
-		 	 this.right = right;
-		 }
+	    int val;
+	    TreeNode left;
+	    TreeNode right;
+	    TreeNode() {}
+	    TreeNode(int val) { this.val = val; }
+	    TreeNode(int val, TreeNode left, TreeNode right) {
+	        this.val = val;
+	        this.left = left;
+	        this.right = right;
+	    }
 	}
 }

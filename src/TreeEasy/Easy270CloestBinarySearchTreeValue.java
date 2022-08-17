@@ -1,6 +1,5 @@
 package TreeEasy;
 
-import TreeEasy.Easy257BinaryTreePaths.TreeNode;
 
 /*
  * Given the root of a binary search tree and a target value, return the value in the BST that is closest to the target.
@@ -42,16 +41,16 @@ public class Easy270CloestBinarySearchTreeValue {
     }
     
     public class TreeNode {
-    	int val;
-    	TreeNode left;
-    	TreeNode right;
-    	TreeNode() {}
-    	TreeNode(int val) { this.val = val; }
-    	TreeNode(int val, TreeNode left, TreeNode right) {
-    		this.val = val;
-    		this.left = left;
-    		this.right = right;
-    	}
+        int val;
+        TreeNode left;
+        TreeNode right;
+        TreeNode() {}
+        TreeNode(int val) { this.val = val; }
+        TreeNode(int val, TreeNode left, TreeNode right) {
+            this.val = val;
+            this.left = left;
+            this.right = right;
+        }
     }
 }
 

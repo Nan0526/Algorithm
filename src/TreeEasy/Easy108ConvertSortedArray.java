@@ -1,6 +1,5 @@
 package TreeEasy;
 
-import TreeEasy.Easy104MaximumDepthOfBinaryTree.TreeNode;
 
 /*
  * Given an integer array nums where the elements are sorted in ascending order, convert it to a height-balanced binary search tree.
@@ -46,15 +45,15 @@ public class Easy108ConvertSortedArray {
     }
     
     public class TreeNode {
-		 int val;
-		 TreeNode left;
-		 TreeNode right;
-		 TreeNode() {}
-		 TreeNode(int val) { this.val = val; }
-		 TreeNode(int val, TreeNode left, TreeNode right) {
-			 this.val = val;
-		 	 this.left = left;
-		 	 this.right = right;
-		 }
-	}
+        int val;
+        TreeNode left;
+        TreeNode right;
+        TreeNode() {}
+        TreeNode(int val) { this.val = val; }
+        TreeNode(int val, TreeNode left, TreeNode right) {
+            this.val = val;
+            this.left = left;
+            this.right = right;
+        }
+    }
 }

@@ -1,6 +1,5 @@
 package TreeEasy;
 
-import TreeEasy.Easy111MinimumDepthOfBinaryTree.TreeNode;
 
 /*
  * Given the root of a binary tree, check whether it is a mirror of itself (i.e., symmetric around its center).
@@ -47,15 +46,15 @@ public class Easy101SymmetricTree {
     }
     
     public class TreeNode {
-		 int val;
-		 TreeNode left;
-		 TreeNode right;
-		 TreeNode() {}
-		 TreeNode(int val) { this.val = val; }
-		 TreeNode(int val, TreeNode left, TreeNode right) {
-			 this.val = val;
-		 	 this.left = left;
-		 	 this.right = right;
-		 }
-	}
+        int val;
+        TreeNode left;
+        TreeNode right;
+        TreeNode() {}
+        TreeNode(int val) { this.val = val; }
+        TreeNode(int val, TreeNode left, TreeNode right) {
+            this.val = val;
+            this.left = left;
+            this.right = right;
+        }
+    }
 }

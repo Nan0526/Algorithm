@@ -1,6 +1,5 @@
 package TreeEasy;
 
-import TreeEasy.Easy543DiameterOfBinaryTree.TreeNode;
 
 /*
  * Given the roots of two binary trees root and subRoot, return true if there is a subtree of root with the same 
@@ -47,16 +46,16 @@ public class Easy572SubtreeOfAnotherTree {
     }
     
     public class TreeNode {
-    	int val;
-    	TreeNode left;
-    	TreeNode right;
-    	TreeNode() {}
-    	TreeNode(int val) { this.val = val; }
-    	TreeNode(int val, TreeNode left, TreeNode right) {
-    		this.val = val;
-    		this.left = left;
-    		this.right = right;
-    	}
+        int val;
+        TreeNode left;
+        TreeNode right;
+        TreeNode() {}
+        TreeNode(int val) { this.val = val; }
+        TreeNode(int val, TreeNode left, TreeNode right) {
+            this.val = val;
+            this.left = left;
+            this.right = right;
+        }
     }
 }
 

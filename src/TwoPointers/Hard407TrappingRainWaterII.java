@@ -13,7 +13,7 @@ We have two small ponds 1 and 3 units trapped.
 The total volume of water trapped is 4.
  */
 
-public class Hard407TappingRainWaterII {
+public class Hard407TrappingRainWaterII {
 
 	//有一点问题 - 
     //问题在于 - 用priorityqueue - so 出来的会是最低的 - “默认poll的是“新那个？”周围的最矮的？？” - 怎么确定？ - 新的周围那个呢？ - 但是先放进去的周围的？ - 周围先放进pq最边上的？ - 但最边上的就一定比中间的高？？ - 

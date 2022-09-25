@@ -14,15 +14,15 @@ public class Easy703KthLargestElementInAStream {
 	        }
 	    }
 	    
-	    public int add(int val) {
-	        if(minHeap.size() < k) {
-	            minHeap.offer(val);
-	        }else if(minHeap.peek() < val) {
-	            minHeap.poll();
-	            minHeap.offer(val);
-	        }
-	        return minHeap.peek();
-	    }
-	}
+    public int add(int val) {
+        if(minHeap.size() < k) {
+            minHeap.offer(val);
+        }else if(minHeap.peek() < val) {
+            minHeap.poll();
+            minHeap.offer(val);
+        }
+        return minHeap.peek();
+    }
 }
+
 
